@@ -1,3 +1,4 @@
+import 'package:experimenting_with_pluto/inspectiong-kewboad-events/ui_table.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
@@ -32,11 +33,12 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MyHomePage(),
+      home: const Experiment(),
     );
   }
 }
 
+/*
 class MyHomePage extends StatefulWidget {
   /// Creates the home page.
   MyHomePage({Key? key}) : super(key: key);
@@ -55,13 +57,15 @@ late EmployeeDataSource dataSource;
   @override
   void initState() {
     textEditingController = TextEditingController()..addListener(textListeners);
-    employees = getEmployeeData();
+    //employees = getEmployeeData();
    dataSource = EmployeeDataSource(employeeData: employees, controller: textEditingController);
 
 
 
-   /* employeeDataSource = EmployeeDataSource(
-        employeeData: employees, controller: textEditingController);*/
+   */
+/* employeeDataSource = EmployeeDataSource(
+        employeeData: employees, controller: textEditingController);*//*
+
     dataGridController = DataGridController(selectedIndex: 0,selectedRow: dataSource.rows.first)
       ..addListener(dataListeners);
     textEditingController = TextEditingController()..addListener(textListeners);
@@ -255,7 +259,8 @@ class EmployeeDataSource extends DataGridSource {
           return Container(
             alignment: Alignment.center,
             padding: const EdgeInsets.all(8.0),
-            child: /*TextField(
+            child: */
+/*TextField(
               controller: controller,
               decoration: InputDecoration(
                 hintText: e.value.toString(),
@@ -266,7 +271,8 @@ class EmployeeDataSource extends DataGridSource {
                 enabledBorder: InputBorder.none,
                 focusedErrorBorder: InputBorder.none,
               ),
-            ),*/
+            ),*//*
+
             Text(e.value.toString()),
           );
         }).toList());
@@ -289,3 +295,4 @@ class CustomSelectionManager extends SelectionManagerBase {
   }
 
 }
+*/
